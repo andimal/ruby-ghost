@@ -1,0 +1,30 @@
+- if build?
+  {{! default}}
+
+%main.content{role: "main"}
+  %article{class: "{{post_class}}"}
+    
+    - if build?
+      - post = nil
+      {{#post}}
+    
+    %span.post-meta
+      %time{datetime: post_published_at(post)}
+        = display_post_published_at(post)
+      
+      %br
+      = "tags: "
+      - if build?
+        {{#foreach tags}}
+        {{name}}
+        {{/foreach}}
+
+      -else
+        - post['tags'].each do |tag|
+          = tag.first
+
+    %h1.post-title= post_title(post)
+    %section.post-content= post_content(post)
+    
+    - if build?
+      {{/post}}
