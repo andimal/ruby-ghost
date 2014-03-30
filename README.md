@@ -1,5 +1,4 @@
 # Middleman for Ghost
----
 
 I'm not a big fan of the node dev environment, but I love Ghost. So I set up a Middleman template for developing Ghost themes.
 
@@ -15,5 +14,8 @@ You also get real blog settings and post data from the ghost-dev.db while runnin
 5. ```middleman build```
 6. Preview on node dev server
 
-[Ghost](https://github.com/TryGhost/Ghost) v0.4
+
+---
+
+[Ghost](https://github.com/TryGhost/Ghost) v0.4  
 [Middleman](https://github.com/TryGhost/Ghost) v3.0.13
